@@ -12,7 +12,8 @@ namespace Icebreaker.Helpers.AdaptiveCards
     using System.Web.Hosting;
     using Icebreaker.Properties;
     using Microsoft.Bot.Connector.Teams.Models;
-
+    using Microsoft.Azure;
+    
     /// <summary>
     /// Builder class for the pairup notification card
     /// </summary>
