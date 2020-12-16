@@ -12,7 +12,6 @@ namespace Icebreaker.Helpers.AdaptiveCards
     using System.Web.Hosting;
     using Icebreaker.Properties;
     using Microsoft.Bot.Connector.Teams.Models;
-    using Microsoft.Azure;
     
     /// <summary>
     /// Builder class for the pairup notification card
@@ -43,8 +42,6 @@ namespace Icebreaker.Helpers.AdaptiveCards
         public static string GetCard(string teamName, TeamsChannelAccount sender, TeamsChannelAccount recipient, string botDisplayName)
         {
             // Guest users may not have their given name specified in AAD, so fall back to the full name if needed
-            var baseDomain = CloudConfigurationManager.GetSetting("AppBaseDomain");
-            var welcomeCardImageUrl = "https://" + baseDomain + "/Content/AlwaysTogether.png";
             var senderGivenName = string.IsNullOrEmpty(sender.GivenName) ? sender.Name : sender.GivenName;
             var recipientGivenName = string.IsNullOrEmpty(recipient.GivenName) ? recipient.Name : recipient.GivenName;
 
@@ -65,10 +62,9 @@ namespace Icebreaker.Helpers.AdaptiveCards
 
             var variablesToValues = new Dictionary<string, string>()
             {
-                { "welcomeCardImageUrl", welcomeCardImageUrl },
-                { "matchUpCardTitleContent", matchUpCardTitleContent + " - " + welcomeCardImageUrl },
-                { "matchUpCardMatchedText", matchUpCardMatchedText + " - " + welcomeCardImageUrl },
-                { "matchUpCardContentPart1", matchUpCardContentPart1 + " - " + welcomeCardImageUrl },
+                { "matchUpCardTitleContent", matchUpCardTitleContent },
+                { "matchUpCardMatchedText", matchUpCardMatchedText },
+                { "matchUpCardContentPart1", matchUpCardContentPart1 },
                 { "matchUpCardContentPart2", matchUpCardContentPart2 },
                 { "chatWithMatchButtonText", chatWithMatchButtonText },
                 { "pauseMatchesButtonText", pauseMatchesButtonText },
