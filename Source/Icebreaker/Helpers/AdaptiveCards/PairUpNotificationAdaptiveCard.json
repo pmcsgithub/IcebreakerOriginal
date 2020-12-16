@@ -1,9 +1,20 @@
 ﻿{
   "type": "AdaptiveCard",
-  "body": [
-    {
+  "body": [      
+    {            
       "type": "Container",
       "items": [
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "image",
+              "style": "Person",
+              "url": "https://github.com/pmcsgithub/IcebreakerOriginal/Content/AlwaysTogether.png",
+              "size": "medium"
+            }
+          ]
+        },
         {
           "type": "Container",
           "items": [
