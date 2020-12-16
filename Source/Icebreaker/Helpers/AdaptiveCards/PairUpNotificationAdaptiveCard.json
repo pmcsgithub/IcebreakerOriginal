@@ -8,7 +8,7 @@
           "type": "Container",
           "items": [
             {
-              "type": "image",
+              "type": "Image",
               "style": "Person",
               "url": "%welcomeCardImageUrl%",
               "size": "medium"
