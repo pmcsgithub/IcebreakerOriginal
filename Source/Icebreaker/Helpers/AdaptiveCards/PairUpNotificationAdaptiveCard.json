@@ -5,19 +5,6 @@
       "type": "Container",
       "items": [
         {
-          "type": "TextBlock",
-          "size": "Medium",
-          "weight": "Bolder",
-          "text": "%matchUpCardTitleContent%",
-          "wrap": true,
-          "maxLines": 2
-        }
-      ]
-    },
-    {
-      "type": "Container",
-      "items": [
-        {
           "type": "Container",
           "items": [
             {
@@ -51,11 +38,7 @@
       "title": "%chatWithMatchButtonText%",
       "url": "https://teams.microsoft.com/l/chat/0/0?users=%personUpn%&message=Hi%20there%20"
     },
-    {
-      "type": "Action.OpenUrl",
-      "title": "%proposeMeetupButtonText%",
-      "url": "%meetingLink%"
-    },
+    
     {
       "type": "Action.Submit",
       "title": "%pauseMatchesButtonText%",
