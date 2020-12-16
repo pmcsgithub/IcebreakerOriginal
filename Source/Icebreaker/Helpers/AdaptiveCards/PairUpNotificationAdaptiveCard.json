@@ -10,7 +10,7 @@
             {
               "type": "image",
               "style": "Person",
-              "url": "https://github.com/pmcsgithub/IcebreakerOriginal/Content/AlwaysTogether.png",
+              "url": "%welcomeCardImageUrl%",
               "size": "medium"
             }
           ]
